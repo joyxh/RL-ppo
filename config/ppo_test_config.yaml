@@ -1,0 +1,59 @@
+# 测试目的：'TagetScatter' // 'JAreward' // 'ComputeVar' // 'Gazebo'
+test_type: 'Gazebo'
+
+# Target放置类型: 'Random' // 'GoThrough_XYZ' // 'AllPos' // 'GivenPos'
+ObjTestType: 'Random'
+
+# 测试episode数量
+max_episodes: 20
+
+# 给定Target_pos
+given_obj_pos: [[-100, 0, 800]]
+
+# 批量给定Target_pos
+all_pos:   [[-100, 0, 800],
+           [-200, 0, 700],
+           [-300, 0, 400],
+           [80, 0, 900],
+           [150, 0, 0],
+           [200, 0, 650],
+           [380, 0, 380],
+           [200, 0, 200],
+           [400, 0, 500],
+           [650, 0, 380],
+           [-100, 0, 100]]
+
+#<<<<<<<<<<<<<<<< FIX >>>>>>>>>>>>>>>>>>#
+TagetScatter:
+  save_csv: True  # 是否保存csv文件(episode_rew & distance)
+  save_pickle: True  # 是否保存pickle文件(episode_rew & distance)
+  save_mean: True  # 是否保存mean文件
+  save_action: False  # 是否保存action信息
+  save_obs: False  # 是否保存obs信息
+  save_var: False  # 是否保存var信息
+
+JAreward:
+  save_csv: False
+  save_pickle: False
+  save_mean: False
+  save_action: True
+  save_obs: True
+  save_var: False
+
+ComputeVar:
+  save_csv: False
+  save_pickle: False
+  save_mean: False
+  save_action: False
+  save_obs: False
+  obs_clip: False
+  save_var: True
+
+Gazebo:
+  save_csv: False
+  save_pickle: False
+  save_mean: False
+  save_action: False
+  save_obs: False
+  save_var: False
+#<<<<<<<<<<<<<<<< FIX >>>>>>>>>>>>>>>>>>#

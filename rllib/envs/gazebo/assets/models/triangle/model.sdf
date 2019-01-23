@@ -1,0 +1,43 @@
+<sdf version='1.6'>
+  <model name='triangle'>
+    <link name='triangle_link'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0.025 0 -0 0</pose>
+        <mass>0.195406</mass>
+        <inertia>
+          <ixx>8.5709e-05</ixx>
+          <ixy>6.97378e-20</ixy>
+          <ixz>4.16316e-20</ixz>
+          <iyy>0.000160708</iyy>
+          <iyz>-1.19497e-20</iyz>
+          <izz>0.000164998</izz>
+        </inertia>
+      </inertial>
+      <collision name='triangle_link_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://triangle/meshes/triangle_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='triangle_link_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://triangle/meshes/triangle_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Green</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,437 @@
+material Pi/Color_Board
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture color_board.png
+        filtering anistropic
+        max_anisotropy 16
+      }
+    }
+  }
+}
+
+material Pi/Calibration_Board
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture calibration_board.png
+        filtering anistropic
+        max_anisotropy 16
+      }
+    }
+  }
+}
+
+material Pi/Grey
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient .3 .3 .3  1.0
+      diffuse .7 .7 .7  1.0
+      specular 0.01 0.01 0.01 1.000000 1.500000
+    }
+  }
+}
+
+material Pi/DarkGrey
+{
+  technique
+  {
+    pass main
+    {
+      ambient .175 .175 .175  1.0
+      diffuse .175 .175 .175  1.0
+      specular .175 .175 .175 1.000000 1.500000
+    }
+  }
+}
+
+material Pi/White
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 1 1 1 1
+    }
+
+    pass light
+    {
+      diffuse 1 1 1 1
+      specular .1 .1 .1 128
+    }
+  }
+}
+
+material Pi/FlatBlack
+{
+  technique
+  {
+    pass
+    {
+      ambient 0.1 0.1 0.1
+      diffuse 0.1 0.1 0.1
+      specular 0.01 0.01 0.01 1.0 1.0
+    }
+  }
+}
+
+material Pi/Black
+{
+  technique
+  {
+    pass
+    {
+      ambient 0 0 0 1
+      diffuse 0 0 0 1
+      specular 0.1 0.1 0.1 1 5.0
+    }
+  }
+}
+
+
+material Pi/Red
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 1 0 0
+      diffuse 1 0 0
+      specular 0.1 0.1 0.1 1 1
+    }
+  }
+}
+
+material Pi/RedBright
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 0.87 0.26 0.07
+      diffuse 0.87 0.26 0.07
+      specular 0.87 0.26 0.07 1 1
+    }
+  }
+}
+
+material Pi/Green
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 0 1 0
+      diffuse 0 1 0
+      specular 0.1 0.1 0.1 1 1
+    }
+  }
+}
+
+material Pi/Blue
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 0 0 1
+      diffuse 0 0 1
+      specular 0.1 0.1 0.1 1 1
+    }
+  }
+}
+
+material Pi/SkyBlue
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 0.13 0.44 0.70
+      diffuse 0 0 1
+      specular 0.1 0.1 0.1 1 1
+    }
+  }
+}
+
+material Pi/Yellow
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 1 1 0 1
+      diffuse 1 1 0 1
+      specular 0 0 0 0 0
+    }
+  }
+}
+
+material Pi/ZincYellow
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 0.9725 0.9529 0.2078 1
+      diffuse 0.9725 0.9529 0.2078 1
+      specular 0.9725 0.9529 0.2078 1 1
+    }
+  }
+}
+
+material Pi/DarkYellow
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 0.7 0.7 0 1
+      diffuse 0.7 0.7 0 1
+      specular 0 0 0 0 0
+    }
+  }
+}
+
+
+material Pi/Purple
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 1 0 1
+      diffuse 1 0 1
+      specular 0.1 0.1 0.1 1 1
+    }
+  }
+}
+
+material Pi/Orange
+{
+  technique
+  {
+    pass ambient
+    {
+      lighting on
+
+      ambient 1 0.5088 0.0468 1
+      diffuse 1 0.5088 0.0468 1
+      specular 0.5 0.5 0.5 128
+    }
+  }
+}
+############################# Transparent #################
+material Pi/GreyTransparent
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient .3 .3 .3  1.0
+      diffuse .7 .7 .7  0.2
+      specular 0.01 0.01 0.01 1.000000 1.500000
+    }
+  }
+}
+
+material Pi/DarkGreyTransparent
+{
+  technique
+  {
+    pass main
+    {
+      ambient .175 .175 .175  1.0
+      diffuse .175 .175 .175  0.2
+      specular .175 .175 .175 1.000000 1.500000
+    }
+  }
+}
+
+material Pi/WhiteTransparent
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 1 1 1 1
+    }
+
+    pass light
+    {
+      diffuse 1 1 1 0.2
+      specular .1 .1 .1 128
+    }
+  }
+}
+
+material Pi/FlatBlackTransparent
+{
+  technique
+  {
+    pass
+    {
+      ambient 0.1 0.1 0.1
+      diffuse 0.1 0.1 0.1 0.2
+      specular 0.01 0.01 0.01 1.0 1.0
+    }
+  }
+}
+
+material Pi/BlackTransparent
+{
+  technique
+  {
+    pass
+    {
+      ambient 0 0 0 1
+      diffuse 0 0 0 0.2
+      specular 0.1 0.1 0.1 1 5.0
+    }
+  }
+}
+
+
+material Pi/RedTransparent
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 1 0 0
+      diffuse 1 0 0 0.2
+      specular 0.1 0.1 0.1 1 1
+    }
+  }
+}
+
+material Pi/RedBrightTransparent
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 0.87 0.26 0.07
+      diffuse 0.87 0.26 0.07 0.2
+      specular 0.87 0.26 0.07 1 1
+    }
+  }
+}
+
+material Pi/GreenTransparent
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 0 1 0
+      diffuse 0 1 0 0.2
+      specular 0.1 0.1 0.1 1 1
+    }
+  }
+}
+
+material Pi/BlueTransparent
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 0 0 1
+      diffuse 0 0 1 0.2
+      specular 0.1 0.1 0.1 1 1
+    }
+  }
+}
+
+material Pi/SkyBlueTransparent
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 0.13 0.44 0.70
+      diffuse 0 0 1 0.2
+      specular 0.1 0.1 0.1 1 1
+    }
+  }
+}
+
+material Pi/YellowTransparent
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 1 1 0 1
+      diffuse 1 1 0 0.2
+      specular 0 0 0 0 0
+    }
+  }
+}
+
+material Pi/ZincYellowTransparent
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 0.9725 0.9529 0.2078 1
+      diffuse 0.9725 0.9529 0.2078 0.2
+      specular 0.9725 0.9529 0.2078 1 1
+    }
+  }
+}
+
+material Pi/DarkYellowTransparent
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 0.7 0.7 0 1
+      diffuse 0.7 0.7 0 1 0.2
+      specular 0 0 0 0 0
+    }
+  }
+}
+
+
+material Pi/PurpleTransparent
+{
+  technique
+  {
+    pass ambient
+    {
+      ambient 1 0 1
+      diffuse 1 0 1 0.2
+      specular 0.1 0.1 0.1 1 1
+    }
+  }
+}
+
+material Pi/OrangeTransparent
+{
+  technique
+  {
+    pass ambient
+    {
+      lighting on
+
+      ambient 1 0.5088 0.0468 1
+      diffuse 1 0.5088 0.0468 0.2
+      specular 0.5 0.5 0.5 128
+    }
+  }
+}

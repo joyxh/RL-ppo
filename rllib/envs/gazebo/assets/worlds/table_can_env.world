@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+<world name = "rr_world">
+	<plugin filename="libgazebo_ros_world_control.so" name="world_control_plugin" />
+	<include>
+		<uri>model://sun</uri>
+	</include>
+	<include>
+		<uri>model://ground_plane</uri>
+	</include>
+  
+  <model name="can">
+    <pose>0.0 -0.45 0.875 0 0 0</pose>
+    <static>true</static>
+    <link name="link">
+      <visual name='visual'>
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.2</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <!-- <collision name="collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.2</length>
+          </cylinder>
+          </geometry>
+      </collision> -->
+    </link>
+  </model>
+
+  <model name="cam_1">
+    <pose>1.009464 -1.101092 1.505751 0.071688 0.490246 2.440701</pose>
+    <include>
+      <uri>model://fix_camera</uri>
+    </include>
+  </model>
+
+  <model name="cam_2">
+    <pose>-0.356332 -1.588751 1.863204 0.111956 0.690027 1.281356</pose>
+    <include>
+      <uri>model://fix_camera</uri>
+    </include>
+  </model>
+
+  <model name="table">
+    <pose frame="">0.0 -0.6 0 0 0 0</pose>
+    <include>
+      <uri>model://cafe_table</uri>
+    </include>
+  </model>
+
+    <model name="rr_arm">
+      <include>
+        <uri>model://rr6</uri>
+      </include>
+
+      <!-- <model name="gripper">
+        <pose frame="">0.4184 0 1.22989 1.57079 0 1.57079</pose>
+        <include>
+          <uri>model://pneumatic_gripper</uri>
+        </include>
+     </model> -->
+    
+		<!-- <model name="left_camera">
+    	<pose frame="">0.45 0.08 1.23 0 0 -0.2</pose>
+    	<include>
+      		<uri>model://camera</uri>
+    	</include>
+    </model>
+    <model name="right_camera">
+    	<pose frame="">0.45 -0.08 1.23 0 0 0.2</pose>
+    	<include>
+      		<uri>model://camera</uri>
+    	</include>
+    </model> -->
+
+    <!-- <joint name="gripper_fixed_in_robot_joint" type="fixed">
+      <parent>rr6::rr6_link6</parent>
+      <child>gripper::pneumatic_gripper::box_link</child>
+    </joint> -->
+    <!-- <joint name="left_camera_fixed_in_gripper_joint" type="fixed">
+      <parent>rr6::rr6_link6</parent>
+      <child>left_camera::camera::link</child>
+    </joint>
+    <joint name="right_camera_fixed_in_gripper_joint" type="fixed">
+      <parent>rr6::rr6_link6</parent>
+      <child>right_camera::camera::link</child>
+    </joint> -->
+
+  </model>
+</world>
+</sdf>

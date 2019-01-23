@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="gui" default="false"/>
+  <arg name="world_name" default="$(find rr_robot_plugin)/worlds/table_can_env.world"/> 
+  <!-- start gazebo client -->
+  <group if="$(arg gui)">
+    <node name="gzclient" pkg="rr_robot_plugin" type="gzclient" respawn="false" output="screen"/>
+  </group>
+  <env name="GAZEBO_MODEL_PATH" value="${GAZEBO_MODEL_PATH}:$(find rr_robot_plugin)/models"/>
+  <!-- start gazebo server-->
+  <node name="gzserver" pkg="rr_robot_plugin" type="gzserver" respawn="false" output="screen"
+	args="$(arg world_name)" />
+</launch>

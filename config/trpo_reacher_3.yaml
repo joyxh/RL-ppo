@@ -1,0 +1,14 @@
+cg_damping: 0.1
+cg_iters: 10
+entcoeff: 0.001
+gamma: 0.99
+lam: 0.99
+max_episodes: 200000.0
+max_kl: 0.05
+obs_type: pose_only
+policy: {gaussian_fixed_var: true, hidden_layers: 2, hidden_size: 128}
+reward_type: precision_only
+seed: 4
+timesteps_per_batch: 8192
+vf_iters: 20
+vf_stepsize: 3.0e-05

@@ -1,0 +1,28 @@
+#cg_damping: 0.1
+#cg_iters: 10
+#entcoeff: 0.001
+#gamma: 0.99
+#lam: 0.99
+#max_episodes: 3.0e+4
+#max_kl: 0.05
+#obs_type: pose_only
+#policy: {gaussian_fixed_var: true, hidden_layers: 2, hidden_size: 128}
+#reward_type: precision_only
+#seed: 0
+#timesteps_per_batch: 8192
+#vf_iters: 5
+#vf_stepsize: 3.0e-05
+
+cg_damping: 0.1
+cg_iters: 10
+entcoeff: 0.001
+gamma: 0.99
+lam: 0.99
+max_episodes: 150000.0
+max_kl: 0.05
+obs_type: pose_only
+policy: {gaussian_fixed_var: true, hidden_layers: 2, hidden_size: 128}
+reward_type: precision_only
+timesteps_per_batch: 8192
+vf_iters: 5
+vf_stepsize: 3.0e-05

@@ -1,0 +1,64 @@
+#entcoeff: 0.0
+#gamma: 0.99
+#lam: 0.95
+#num_timesteps: 1.5e+7
+#obs_type: 'pose_only'
+#optim_batchsize: 256
+#optim_epochs: 15
+#optim_stepsize: 3.0e-4
+#clip_param: 0.1
+#policy:
+#  hidden_size: 128
+#  hidden_layers: 3
+#  gaussian_fixed_var: True
+#schedule: 'linear'
+#timesteps_per_actorbatch: 8192
+#seed: [0, 1, 2]
+
+#clip_param: 0.2
+#entcoeff: 0.0
+#gamma: 0.99
+#lam: 0.95
+#num_timesteps: 1.0e+6
+#obs_type: 'pose_only'
+#optim_batchsize: [64, 128]
+#optim_epochs: 10
+#optim_stepsize: 0.0003
+#policy:
+#  hidden_size: [256, 128]
+#  hidden_layers: [4, 3]
+#  gaussian_fixed_var: [True, False]
+#schedule: 'linear'
+#seed: 0
+#timesteps_per_actorbatch: 2048
+
+#clip_param: [0.1, 0.2]
+#entcoeff: 0.0
+#gamma: 0.99
+#lam: 0.95
+#num_timesteps: 3.0e+6
+#obs_type: 'pose_only'
+#optim_batchsize: [128, 256]
+#optim_epochs: [15, 25]
+#optim_stepsize: 3.0e-4
+#policy:
+#  hidden_size: 256
+#  hidden_layers: 4
+#  gaussian_fixed_var: True
+#schedule: 'linear'
+#seed: 0
+#timesteps_per_actorbatch: [16384, 32768]
+
+clip_param: [0.2, 0.1]
+entcoeff: 0.0
+gamma: 0.99
+lam: 0.95
+num_timesteps: 1.0e+7
+obs_type: pose_only
+optim_batchsize: [1024, 2048]
+optim_epochs: [15, 10]
+optim_stepsize: 0.0003
+policy: {gaussian_fixed_var: true, hidden_layers: 4, hidden_size: 256}
+schedule: linear
+seed: 0
+timesteps_per_actorbatch: 8192

@@ -1,0 +1,43 @@
+<sdf version='1.6'>
+  <model name='hexagon'>
+    <link name='hexagon_link'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>-0 0 0.025 0 -0 0</pose>
+        <mass>0.432347</mass>
+        <inertia>
+          <ixx>0.000389851</ixx>
+          <ixy>-7.61006e-20</ixy>
+          <ixz>1.22872e-19</ixz>
+          <iyy>0.000389851</iyy>
+          <iyz>-1.82259e-20</iyz>
+          <izz>0.000599557</izz>
+        </inertia>
+      </inertial>
+      <collision name='hexagon_link_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://hexagon/meshes/hexagon_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='hexagon_link_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://hexagon/meshes/hexagon_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Blue</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,17 @@
+num_timesteps: 2.5e+6
+timesteps_per_actorbatch: 2048
+seed: 0
+gamma: 0.99
+lam: 0.95
+clip_param: 0.2
+entcoeff: 0.0
+optim_epochs: 10
+optim_stepsize: 3.0e-4
+optim_batchsize: 64
+schedule: 'linear'
+obs_type: 'pose_only'
+reward_type: 'precision_only'
+policy:
+  hidden_size: 256
+  hidden_layers: 4
+  gaussian_fixed_var: False

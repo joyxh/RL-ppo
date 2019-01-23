@@ -1,0 +1,16 @@
+num_timesteps: 1.0e+6
+timesteps_per_batch: 512
+max_kl: 0.05
+cg_iters: 10
+cg_damping: 0.1
+gamma: 0.99
+lam: 0.99
+vf_iters: 10
+vf_stepsize: 2.0e-3
+entcoeff: 0.0
+obs_type: 'pose_only'
+reward_type: 'precision_only'
+policy:
+  hidden_size: 64
+  hidden_layers: 3
+  gaussian_fixed_var: False

@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="depth">
+  	<pose>0 0 0 -1.5707963267948966 0 -1.5707963267948966</pose>
+    <link name="link">
+     <!--  <inertial>
+        <mass>0.1</mass>
+        <inertia>
+        <ixx>0.004364408333333333</ixx>
+        <iyy>0.000678</iyy>
+        <izz>0.0006792083333333334</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.276000 0.073000 0.072000</size>
+          </box>
+        </geometry>
+      </collision> -->
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://depth/meshes/depth.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <sensor name="camera" type="depth">
+        <plugin filename="libgazebo_ros_depth_camera.so" name="depth_camera_plugin" />
+      	<pose>0 0 0 0 -1.5707963267948966 1.5707963267948966</pose>
+        <update_rate>10</update_rate>
+        <camera>
+          <horizontal_fov>1.047198</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+          </image>
+          <clip>
+            <near>0.05</near>
+            <far>2</far>
+          </clip>
+            <depth_camera>
+            <output>points</output> <!-- points depths-->
+           </depth_camera>
+        </camera>
+      </sensor>
+    </link>
+  </model>
+</sdf>

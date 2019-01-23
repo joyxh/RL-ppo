@@ -1,0 +1,14 @@
+clip_param: 0.2
+entcoeff: 0.0
+gamma: 0.99
+lam: 0.95
+num_timesteps: 1000000.0
+obs_type: pose_only
+optim_batchsize: 1024
+optim_epochs: 5
+optim_stepsize: 0.0003
+policy: {gaussian_fixed_var: false, hidden_layers: 2, hidden_size: 128}
+reward_type: precision_only
+schedule: linear
+seed: 0
+timesteps_per_actorbatch: 1024

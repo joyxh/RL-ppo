@@ -1,0 +1,88 @@
+FAKEROBOT:
+  Axis6:
+      # real?:
+#    jointUpperLimit: [170,  140,   45,  200,  100.0, 360.0]
+#    jointLowerLimit: [-170, -50, -215, -200, -100.0,-360.0]
+    jointUpperLimit: [180.  , 180,  90, 180.  , 180.  , 180.  ]
+    jointLowerLimit: [-180.  ,  -180.  , -270, -180.  , -180.  , -180.  ]
+    dH_a: [0.0, 88.4, 260.0, 0.0, 0.0, 0.0]
+    dH_d: [369.89, 0.0, 0.0, 241.0, 0.0, 89.0]
+    rotDir: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+    weight: [8.0, 5.0, 3.0, 1.5, 0.5, 0.1]
+    disPerJoint4Deg360: 0
+    disPerJoint3Deg360: 0
+
+  Axis4:
+    jointUpperLimit: [ 114.8,  120.0,    2.3,  359.0]
+    jointLowerLimit: [-114.8, -120.0, -271.2, -359.0]
+    dH_a: [0.0, 225.0, 175.0, 0.0]
+    dH_d: [123.0, 0.0, 0.0, 0.0]
+    rotDir: [-1.0, -1.0, 1.0, -1.0]
+    weight: [4.0, 3.0, 1.0, 0.5]
+    disPerJoint4Deg360: 0.0
+    disPerJoint3Deg360: 150.0
+
+PIROBOT:
+  Axis6:
+      # real?:
+#    jointUpperLimit: [170,  140,   45,  200,  100.0, 360.0]
+#    jointLowerLimit: [-170, -50, -215, -200, -100.0,-360.0]
+    # in gazebo:
+    jointUpperLimit: [180.  , 126.05,  34.37, 180.  , 100.  , 360.  ]
+    jointLowerLimit: [-180.  ,  -51.  , -206.26, -180.  , -100.  , -360.  ]
+    dH_a: [0.0, 88.4, 260.0, 0.0, 0.0, 0.0]
+    dH_d: [369.89, 0.0, 0.0, 241.0, 0.0, 89.0]
+    rotDir: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+    weight: [8.0, 5.0, 3.0, 1.5, 0.5, 0.1]
+    disPerJoint4Deg360: 0
+    disPerJoint3Deg360: 0
+
+  Axis4:
+    jointUpperLimit: [ 114.8,  120.0,    2.3,  359.0]
+    jointLowerLimit: [-114.8, -120.0, -271.2, -359.0]
+    dH_a: [0.0, 225.0, 175.0, 0.0]
+    dH_d: [123.0, 0.0, 0.0, 0.0]
+    rotDir: [-1.0, -1.0, 1.0, -1.0]
+    weight: [4.0, 3.0, 1.0, 0.5]
+    disPerJoint4Deg360: 0.0
+    disPerJoint3Deg360: 150.0
+
+KENTV2:
+  Axis6:
+    jointUpperLimit: [ 150,   70,   50,  200,  100,  360.0]
+    jointLowerLimit: [-150, -130, -125, -200, -100, -360.0]
+    dH_a: [0.0, 76.0, 210.0, 65.0, 0.0, 0.0]
+    dH_d: [303.3, 0.0, 0.0, 245.0, -0.0, 160.0]
+    rotDir: [-1.0, -1.0, 1.0, -1.0, 1.0, -1.0]
+    weight: [9.0, 6.0, 3.5, 2.5, 2.0, 0.3]
+    disPerJoint4Deg360: 0
+    disPerJoint3Deg360: 0
+  Axis4:
+    jointUpperLimit: [130.0,  140.0,  36.0,  360.0]
+    jointLowerLimit: [-130.0, -140.0, -333.0, -360.0]
+    dH_a: [0.0, 225.0, 175.0, 0.0]
+    dH_d: [179.0, 0.0, 0.0, 0.0]
+    rotDir: [-1.0, -1.0, 1.0, -1.0]
+    weight: [7.5, 4.0, 1.0, 0.1]
+    disPerJoint4Deg360: 16.0
+    disPerJoint3Deg360: 160.0
+
+KENTV3:
+  Axis6:
+    jointUpperLimit: [150, 70, 60, 210, 115.0, 360.0]
+    jointLowerLimit: [-150, -145, -150, -210, -115.0, -360.0]
+    dH_a: [0.0, 100.0, 250.0, 67.0, 0.0, 0.0]
+    dH_d: [315.3, 0.0, 0.0, 272.0, -0.0, 66.0]
+    rotDir: [-1.0, -1.0, 1.0, -1.0, 1.0, -1.0]
+    weight: [5.0, 3.0, 2.0, 1.0, 0.5, 0.1]
+    disPerJoint4Deg360: 0
+    disPerJoint3Deg360: 0
+  Axis4:
+    jointUpperLimit: [130.0,  140.0,  117.0,  360.0]
+    jointLowerLimit: [-130.0, -140.0, -427.0, -360.0]
+    dH_a: [0.0, 225.0, 175.0, 0.0]
+    dH_d: [179.0, 0.0, 0.0, 0.0]
+    rotDir: [-1.0, -1.0, 1.0, -1.0]
+    weight: [7.5, 4.0, 1.0, 0.1]
+    disPerJoint4Deg360: 16.0
+    disPerJoint3Deg360: 160.0

@@ -1,0 +1,29 @@
+clip_param: 0.2
+entcoeff: 0.0
+gamma: 0.99
+lam: 0.95
+num_timesteps: 5.0e+5
+obs_type: pose_only
+optim_batchsize: 128
+optim_epochs: 10
+optim_stepsize: 0.0003
+policy: {gaussian_fixed_var: true, hidden_layers: 3, hidden_size: 128}
+schedule: linear
+seed: 1
+timesteps_per_actorbatch: 2048
+#num_timesteps: 1.5e+7
+#timesteps_per_actorbatch: 8192
+#seed: 2
+#gamma: 0.99
+#lam: 0.95
+#clip_param: 0.2
+#entcoeff: 0.0
+#optim_epochs: 10
+#optim_stepsize: 1.0e-3
+#optim_batchsize: 128
+#schedule: 'linear'
+#obs_type: 'pose_only'
+#policy:
+#  hidden_size: 128
+#  hidden_layers: 3
+#  gaussian_fixed_var: True

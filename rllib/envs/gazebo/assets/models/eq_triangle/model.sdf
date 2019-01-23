@@ -1,0 +1,43 @@
+<sdf version='1.6'>
+  <model name='eq_triangle'>
+    <link name='eq_triangle_link'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>-0 -0 0.025 0 -0 0</pose>
+        <mass>0.203689</mass>
+        <inertia>
+          <ixx>0.000122281</ixx>
+          <ixy>-5.39984e-21</ixy>
+          <ixz>-7.81026e-21</ixz>
+          <iyy>0.000122281</iyy>
+          <iyz>-1.09311e-20</iyz>
+          <izz>0.000159692</izz>
+        </inertia>
+      </inertial>
+      <collision name='eq_triangle_link_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://eq_triangle/meshes/eq_triangle_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='eq_triangle_link_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://eq_triangle/meshes/eq_triangle_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Purple</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

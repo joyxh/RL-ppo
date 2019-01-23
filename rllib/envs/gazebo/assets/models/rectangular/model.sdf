@@ -1,0 +1,43 @@
+<sdf version='1.6'>
+  <model name='rectangular'>
+    <link name='rectangular_link'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0.025 0 -0 0</pose>
+        <mass>0.6528</mass>
+        <inertia>
+          <ixx>0.00063735</ixx>
+          <ixy>-3.95282e-20</ixy>
+          <ixz>-1.33866e-20</ixz>
+          <iyy>0.00114218</iyy>
+          <iyz>2.41362e-20</iyz>
+          <izz>0.00150753</izz>
+        </inertia>
+      </inertial>
+      <collision name='rectangular_link_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://rectangular/meshes/rectangular_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rectangular_link_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://rectangular/meshes/rectangular_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+        <script>
+          <name>Gazebo/Black</name>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+        </script>
+      </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

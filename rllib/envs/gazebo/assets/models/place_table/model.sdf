@@ -1,0 +1,44 @@
+<sdf version='1.6'>
+  <model name='place_table'>
+  <static>1</static>
+    <link name='place_table_link'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 -0 0.025 0 -0 0</pose>
+        <mass>9.08676</mass>
+        <inertia>
+          <ixx>0.28895</ixx>
+          <ixy>-0.00284871</ixy>
+          <ixz>1.60901e-18</ixz>
+          <iyy>0.129304</iyy>
+          <iyz>4.08145e-19</iyz>
+          <izz>0.414467</izz>
+        </inertia>
+      </inertial>
+      <collision name='place_table_link_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://place_table/meshes/place_table_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='place_table_link_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://place_table/meshes/place_table_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/White</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

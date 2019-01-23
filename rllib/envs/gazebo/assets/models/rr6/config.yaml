@@ -1,0 +1,31 @@
+
+JointSpace: 
+  default_rate: 20
+  joint_name: [rr6::rr6_joint1, rr6::rr6_joint2, rr6::rr6_joint3, rr6::rr6_joint4, rr6::rr6_joint5, rr6::rr6_joint6]
+  max_acc: [87.2664625997, 87.2664625998, 87.2664625997, 87.2664625996, 87.2664625997, 87.2664625996]
+  max_vel: [8.72664625997, 8.72664625997, 8.72664625997, 8.72664625997, 8.72664625997, 8.72664625997]
+  min_limit:  [-3.14159265359, -0.890117918517, -3.59991611516, -3.14159265359, -1.74532925199, -6.28318530718]
+  max_limit:  [3.14159265359, 2.19998752214, 0.59986966391, 3.14159265359, 1.74532925199, 6.28318530718]
+
+CartesianSpace: 
+  default_rate: 20
+  rot_eq_trans: 2.0
+  max_trans_acc: 5
+  max_trans_vel: 2
+
+DHParam: 
+  weight: [7.28793752546, 5.2815947593, 2.73749620167, 1.56531310416, 0.525004341912, 0.0296444532395]
+  a: [0.0, 0.0884, 0.26, 0.0, 0.0, 0.0]
+  d: [0.36989, -0.0, -0.0, 0.241, -0.0, 0.089]
+  rot_dir: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+
+SelfCollision: 
+  stl_path: 
+  - '/home/zhyp/.gazebo/models/rr6/meshes/rr6_link0.STL'
+  - '/home/zhyp/.gazebo/models/rr6/meshes/rr6_link1.STL'
+  - '/home/zhyp/.gazebo/models/rr6/meshes/rr6_link2.STL'
+  - '/home/zhyp/.gazebo/models/rr6/meshes/rr6_link3.STL'
+  - '/home/zhyp/.gazebo/models/rr6/meshes/rr6_link4.STL'
+  - '/home/zhyp/.gazebo/models/rr6/meshes/rr6_link5.STL'
+  - '/home/zhyp/.gazebo/models/rr6/meshes/rr6_link6.STL'
+  collide_group: [[0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [1, 3], [1, 4], [1, 5], [1, 6], [2, 4], [2, 5], [2, 6], [3, 5], [3, 6], [4, 6]]

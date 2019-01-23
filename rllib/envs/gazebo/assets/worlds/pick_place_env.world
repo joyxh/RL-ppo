@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+<world name = "rr_world">
+	<plugin filename="libgazebo_ros_world_control.so" name="world_control_plugin" />
+	<include>
+		<uri>model://sun</uri>
+	</include>
+	<include>
+		<uri>model://ground_plane</uri>
+	</include>
+	<include>
+		<pose frame="">0.0 0.4 0.775 0 0 -1.57079</pose>
+		<uri>model://place_table</uri>
+	</include>
+  <!-- <include>
+    <pose frame="">-0.2 -0.3 0.775 0 0 0</pose>
+    <uri>model://circle</uri>
+  </include> -->
+  <include>
+    <pose frame="">0.0 -0.3 0.775 0 0 0</pose>
+    <uri>model://cube</uri>
+  </include>
+  <!-- <include>
+    <pose frame="">0.2 -0.3 0.775 0 0 0</pose>
+    <uri>model://eq_triangle</uri>
+  </include>
+  <include>
+    <pose frame="">-0.2 -0.45 0.775 0 0 0</pose>
+    <uri>model://hexagon</uri>
+  </include>
+  <include>
+    <pose frame="">0.0 -0.45 0.775 0 0 0</pose>
+    <uri>model://rectangular</uri>
+  </include>
+  <include>
+    <pose frame="">0.2 -0.45 0.775 0 0 0</pose>
+    <uri>model://triangle</uri>
+  </include> -->
+  <model name="table_1">
+    <pose frame="">0.0 -0.6 0 0 0 0</pose>
+    <include>
+      <uri>model://cafe_table</uri>
+    </include>
+  </model>
+  <model name="table_2">
+    <pose frame="">0.0 0.6 0 0 0 0</pose>
+    <include>
+      <uri>model://cafe_table</uri>
+    </include>
+  </model>
+  <model name="cam_left2">
+    <pose>0.32 -0.88 1.285 0.125 0.74 2.13</pose>
+    <include>
+      <uri>model://fix_camera</uri>
+    </include>
+  </model>
+  <model name="cam_left1">
+    <pose>-0.35 -0.935 1.355 0.012 0.785 1.16</pose>
+    <include>
+      <uri>model://fix_camera</uri>
+    </include>
+  </model>
+  <model name="cam_right1">
+    <pose>-0.42 0.9 1.45 0.35 0.77 -0.92</pose>
+    <include>
+      <uri>model://fix_camera</uri>
+    </include>
+  </model>
+
+  <model name="cam_right2">
+    <pose>0.6 0.93 1.37 0.087 0.6 -2.32</pose>
+    <include>
+      <uri>model://fix_camera</uri>
+    </include>
+  </model>
+
+    <model name="rr_arm">
+      <include>
+        <uri>model://rr6</uri>
+      </include>
+<!--     <model name="gripper">
+      <pose frame="">0.43 0 1.22989 0 -1.57079 3.14159</pose>
+      <include>
+        <uri>model://catch_gripper</uri>
+      </include>
+    </model> -->
+
+      <model name="gripper">
+        <pose frame="">0.4184 0 1.22989 1.57079 0 1.57079</pose>
+        <include>
+          <uri>model://pneumatic_gripper</uri>
+        </include>
+     </model>
+    <model name="depth_camera">
+      <pose frame="">0.437 0.0 1.30 0 0 0</pose>
+    	<include>
+      	<uri>model://depth</uri>
+    	</include>
+  	</model> 
+		<model name="left_camera">
+    	<pose frame="">0.45 0.08 1.23 0 0 -0.2</pose>
+    	<include>
+      		<uri>model://camera</uri>
+    	</include>
+    </model>
+    <model name="right_camera">
+    	<pose frame="">0.45 -0.08 1.23 0 0 0.2</pose>
+    	<include>
+      		<uri>model://camera</uri>
+    	</include>
+    </model>
+   <!--  <joint name="gripper_fixed_in_robot_joint" type="fixed">
+      <parent>rr6::rr6_link6</parent>
+      <child>catch_gripper::gripper_base</child>
+    </joint> -->
+    <joint name="gripper_fixed_in_robot_joint" type="fixed">
+      <parent>rr6::rr6_link6</parent>
+      <child>gripper::pneumatic_gripper::box_link</child>
+    </joint>
+    <joint name="left_camera_fixed_in_gripper_joint" type="fixed">
+      <parent>rr6::rr6_link6</parent>
+      <child>left_camera::camera::link</child>
+    </joint>
+    <joint name="right_camera_fixed_in_gripper_joint" type="fixed">
+      <parent>rr6::rr6_link6</parent>
+      <child>right_camera::camera::link</child>
+    </joint>
+     <joint name="kinect_fixed_in_gripper_joint" type="fixed">
+      <parent>rr6::rr6_link6</parent>
+      <child>depth_camera::depth::link</child>
+    </joint>
+  </model>
+</world>
+</sdf>

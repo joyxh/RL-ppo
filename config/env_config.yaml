@@ -1,0 +1,9 @@
+X_LIMIT: [300, 600]
+Y_LIMIT: [-200, 200]
+Z_LIMIT: [200, 500]
+robot_name: 'FAKEROBOT'                         # Motion range of robot: 'FAKEROBOT'(no JA limit) or 'PIROBOT'(JA limit to workspace)
+random_target_mode: 'joint_angle'               # Reset mode for target: 'joint_angle' or 'pose'
+random_target_method: 'uniform'                 # Radom method: 'uniform' or 'gaussian'
+dof_ctrl_index: [0, 1, 2, 3, 4, 5]                        # Choose num of axes for robot: [1, 2] for 2-axis // [0, 1, 2, 3, 4, 5] for 6-axis
+NewRewF: False                                  # Choose reward function: True (new rew function) or False (old rew function)
+given_init_robot_ja_6x1:  # input nothing for random init robot pos // input 1X6 array for given init JA (e.g.[0, 0, 0, 0, 0, 0])
